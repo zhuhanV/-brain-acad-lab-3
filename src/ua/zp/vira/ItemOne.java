@@ -8,9 +8,11 @@ import java.util.Scanner;
 public class ItemOne {
     public static void main(String[] args) {
 
-        //1. Написати програму, де оголошено та проініціалізовано всі примітивні типи даних.
-        //(byte, short, int, long, float, double, char, boolean)
-        //Необхідно вивести на екран усі значення цих змінних.
+        /*1. Написати програму, де оголошено та проініціалізовано всі примітивні типи даних.
+        (byte, short, int, long, float, double, char, boolean)
+        Необхідно вивести на екран усі значення цих змінних.
+        */
+
         System.out.println("Ex. 1");
         byte b = 1;
         System.out.println("type byte value =" + b);
@@ -29,12 +31,12 @@ public class ItemOne {
         boolean bo = true;
         System.out.println("type boolean value =" + true);
 
-        //2. Застосувати практично можливі перетворення без втрати точності.
-        // byte -> short -> int -> long
-        // int -> double
-        // short -> float -> double
-        // char -> int
-
+        /*2. Застосувати практично можливі перетворення без втрати точності.
+        byte -> short -> int -> long
+        int -> double
+        short -> float -> double
+        char -> int
+        */
         System.out.println('\n' + "Ex. 2");
         short sh1 = (short) b;
         System.out.println("byte -> short = " + sh1);
@@ -53,32 +55,36 @@ public class ItemOne {
         i = (int) ch;
         System.out.println("char -> int= " + i);
 
-        // Застосувати практично автоматичне перетворення, але з втратою точності: int -> float
-        //1. Проініціалізувати змінну типу int максимальним значенням
-        //2. Присвоїти її значення змінної типу float.
-        //3. Вивести обидва числа на екран.
-
+        /* Застосувати практично автоматичне перетворення, але з втратою точності: int -> float
+        1. Проініціалізувати змінну типу int максимальним значенням
+        2. Присвоїти її значення змінної типу float.
+        3. Вивести обидва числа на екран.
+        */
         System.out.println('\n' + "Ex. 3");
         int i1 = 2147483647;
         float f1 = (float) i1;
         System.out.println("int= " + i1);
-        System.out.println("float= "+f1);
+        System.out.println("float= " + f1);
 
-        //Перевірити роботу переповнення мантиси числа в java.
-        //1.Створити змінну типу byte та проініціалізувати її максимальним значенням.
-        //2.Виконати операцію "інкремент" для цієї змінної.
-        //3. Вивести значення на екран
+        /*Перевірити роботу переповнення мантиси числа в java.
+        1.Створити змінну типу byte та проініціалізувати її максимальним значенням.
+        2.Виконати операцію "інкремент" для цієї змінної.
+        3. Вивести значення на екран
+        */
+
         System.out.println('\n' + "Ex. 4");
-        byte b1= 127;
+        byte b1 = 127;
         b1++;
         System.out.println(b1);
 
-        //Написати тернарну операцію, яка визначає парність числа та формує
-        //відповідний рядок, який виводиться на екран
+        /*Написати тернарну операцію, яка визначає парність числа та формує
+        відповідний рядок, який виводиться на екран
+        */
+
         System.out.println('\n' + "Ex. 5");
-          Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         int a = scan.nextInt();
-        System.out.println(a%2==0?"number is even":"odd number");
+        System.out.println(a % 2 == 0 ? "number is even" : "odd number");
 
     }
 }
